@@ -1,22 +1,165 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Chief Assistant HQ</title>
-    <meta charset="UTF-8">
-    <style>
-      body { font-family: sans-serif; text-align: center; padding: 50px; background: #f4f4f9; }
-      h1 { color: #333; }
-      p { color: #555; }
-      a.button { 
-        display: inline-block; margin-top: 20px; padding: 10px 20px; 
-        background: #007BFF; color: white; text-decoration: none; border-radius: 5px;
-      }
-      a.button:hover { background: #0056b3; }
-    </style>
-  </head>
-  <body>
-    <h1>Welcome to Chief Assistant HQ</h1>
-    <p>This is my free website hosted on GitHub Pages 🚀</p>
-    <a class="button" href="#">Learn More</a>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dream Job – Assistant Chief Engineer at KOSA-TV</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #000000, #003366);
+      padding: 60px 20px;
+      text-align: center;
+      color: #00aaff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      text-shadow: 0 0 10px #00aaff, 0 0 20px #0088ff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #00aaff, 0 0 10px #0088ff; }
+      to { text-shadow: 0 0 15px #00eaff, 0 0 30px #00ccff; }
+    }
+    nav {
+      margin-top: 20px;
+    }
+    nav a {
+      color: #00aaff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    nav a:hover {
+      background: #00aaff;
+      color: #000;
+      box-shadow: 0 0 10px #00ccff;
+    }
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section h2 {
+      color: #00aaff;
+      border-bottom: 2px solid #00aaff;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px #0088cc;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li::before {
+      content: "⚡";
+      color: #00aaff;
+      margin-right: 10px;
+    }
+    /* Footer */
+    footer {
+      background: #000000;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 40px;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dream Job: Assistant Chief Engineer</h1>
+    <p>KOSA-TV • Odessa, TX</p>
+    <nav>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#roadmap">Career Roadmap</a>
+    </nav>
+  </header>
+
+  <section id="goal">
+    <h2>My Dream Job Goal</h2>
+    <p>I aspire to become an <strong>Assistant Chief Engineer at KOSA-TV</strong> in Odessa, TX. This role combines my passion for technology, broadcasting, and leadership in a dynamic environment.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Computer Repair & Networking</li>
+      <li>Programming Basics</li>
+      <li>Broadcast Systems & Signal Transmission</li>
+      <li>Troubleshooting & Equipment Setup</li>
+      <li>Teamwork and Communication</li>
+      <li>Staying Calm Under Pressure</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>B.S. in Information Technology</strong> (Expected 2026)</p>
+    <p><em>Relevant Coursework:</em> Computer Repair, Networking, Programming, Media Technology</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p><strong>Media Team Volunteer – School Assemblies & Sports Events</strong></p>
+    <p>Set up cameras, microphones, and managed sound/video equipment to ensure smooth operations.</p>
+    <p><strong>Future Internship/Entry-Level Broadcasting Roles (2026–2028)</strong></p>
+    <p>Plan to gain hands-on experience in IT support, AV technology, and broadcast technician positions.</p>
+  </section>
+
+  <section id="roadmap">
+    <h2>Career Roadmap</h2>
+    <ul>
+      <li>2022–2026 – Complete degree in Information Technology, gain hands-on experience with school media team.</li>
+      <li>2026–2028 – Work in entry-level roles such as Broadcast Technician or IT Specialist to build technical and broadcast skills.</li>
+      <li>2028–2030 – Apply for Assistant Chief Engineer at KOSA-TV and similar opportunities.</li>
+      <li>Beyond 2030 – Advance to Chief Engineer or Director of Engineering, leading broadcast technology teams.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Created by Kimmy Blue • For Dream Job Project • © 2025</p>
+  </footer>
+
+  <!-- JavaScript for fade-in animation on scroll -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const reveal = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const secTop = sec.getBoundingClientRect().top;
+        if(secTop < triggerBottom) {
+          sec.classList.add("show");
+        }
+      });
+    };
+    window.addEventListener("scroll", reveal);
+    reveal(); // run once on load
+  </script>
+
+</body>
 </html>
